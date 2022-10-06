@@ -1,10 +1,13 @@
 version: "3.3"
+
 services:
   payment-exchange-service-runner:
     image: market-making-service
     build: .
     restart: unless-stopped
     ports: ["8080:8080/tcp"]
+    networks:
+      - payment-exchange-service-network
     environment:
       - LOGGER_APP
       - LOGGER_HTTP
@@ -18,3 +21,9 @@ services:
       - LBANK_AMOUNT_MAX
       - LBANK_PRICE_MIN
       - LBANK_PRICE_MAX
+
+networks:
+  payment-exchange-service-network:
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1400
