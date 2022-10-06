@@ -1,0 +1,18 @@
+logger:
+  levels:
+    co.xorde.market_making_service: ${LOGGER_APP:INFO}
+    okhttp3: ${LOGGER_HTTP:WARN}
+
+microservice:
+  orderExchangeCronJob: '* * * * *'
+  exchange:
+    apiUrl: ${LBANK_API:https://api.lbkex.com}
+    method: ${LBANK_METHOD:RSA}
+    apiKey: ${LBANK_KEY:}
+    secretKey: ${LBANK_SECRET:}
+    pair: ${LBANK_PAIR:usdr_usdt}
+    amountStep: ${LBANK_AMOUNT_STEP:0.1}
+    amountRangeMin: ${LBANK_AMOUNT_MIN:5}
+    amountRangeMax: ${LBANK_AMOUNT_MAX:10}
+    priceRangeMin: ${LBANK_PRICE_MIN:0.9997}
+    priceRangeMax: ${LBANK_PRICE_MAX:1.0000}

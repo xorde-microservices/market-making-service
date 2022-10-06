@@ -1,0 +1,20 @@
+version: "3.3"
+services:
+  payment-exchange-service-runner:
+    image: market-making-service
+    build: .
+    restart: unless-stopped
+    ports: ["8080:8080/tcp"]
+    environment:
+      - LOGGER_APP
+      - LOGGER_HTTP
+      - LBANK_API
+      - LBANK_METHOD
+      - LBANK_KEY
+      - LBANK_SECRET
+      - LBANK_PAIR
+      - LBANK_AMOUNT_STEP
+      - LBANK_AMOUNT_MIN
+      - LBANK_AMOUNT_MAX
+      - LBANK_PRICE_MIN
+      - LBANK_PRICE_MAX
