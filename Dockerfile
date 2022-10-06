@@ -4,6 +4,7 @@ WORKDIR /home/gradle/src
 COPY --chown=gradle:gradle . /home/gradle/src
 
 ### check connectivity to maven repo
+RUN apk add --no-cache curl
 RUN curl -s -f --show-error -o /dev/null -w "%{http_code}" https://repo.maven.apache.org
 RUN gradle build --no-daemon
 RUN ls -la /home/gradle/src/build/libs
