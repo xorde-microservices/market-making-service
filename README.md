@@ -1,5 +1,8 @@
 # Market Making Service
 
+[![Build](https://github.com/xorde-microservices/market-making-service/actions/workflows/gradle.yml/badge.svg)](https://github.com/xorde-microservices/market-making-service/actions/workflows/gradle.yml)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/xorde-microservices/market-making-service)
+
 Simple market making service that can be used to provide liquidity to a LBank exchange.
 
 ## Quick Start
