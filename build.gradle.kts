@@ -48,6 +48,7 @@ dependencies {
 application {
     mainClass.set("co.xorde.market_making_service.ApplicationKt")
 }
+
 java {
     sourceCompatibility = JavaVersion.toVersion("17")
 }
