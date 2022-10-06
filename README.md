@@ -2,6 +2,21 @@
 
 Simple market making service that can be used to provide liquidity to a LBank exchange.
 
+## Quick Start
+
+### Grab Source Code
+
+```bash
+git clone https://github.com/xorde-microservices/market-making-service.git
+```
+
+### Run Docker Compose
+
+```bash
+cd market-making-service
+docker-compose up -d
+```
+
 ##  Build
 
 In project home dir run:
