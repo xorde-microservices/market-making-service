@@ -3,7 +3,7 @@ version: "3.3"
 services:
   runner:
     image: ghcr.io/xorde-microservices/market-making-service
-    build: .
+    build: ..
     restart: unless-stopped
     ports: ["8080:8080/tcp"]
     environment:

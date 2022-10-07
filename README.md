@@ -7,20 +7,40 @@ Simple market making service that can be used to provide liquidity to a LBank ex
 
 ## Quick Start
 
+### Create new API key
+
+#### LBank
+
+1. Login to your LBank account
+2. Go to [API Management](https://www.lbank.info/user-sectruty-api.html)
+3. Create new API key 
+4. Set `Read Info` and `Trade` permission 
+5. Set type to `RSA`
+6. Copy API key and secret
+
 ### Grab Source Code
 
 ```bash
 git clone https://github.com/xorde-microservices/market-making-service.git
 ```
 
+### Create and edit `.env` File
+
+```bash
+cd market-making-service/docker
+cp .env.example .env
+nano .env # or vim .env
+```
+
+
+
 ### Run Docker Compose
 
 ```bash
-cd market-making-service
 docker-compose up -d
 ```
 
-##  Build
+## Build
 
 In project home dir run:
 1. `gradle build`

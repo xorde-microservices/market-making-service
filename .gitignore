@@ -16,4 +16,4 @@ bin/
 .project
 */test/
 */META-INF/
-.env
+docker/.env
